@@ -18,9 +18,6 @@ const navLinks: NavLink[] = [
 
 const Navbar: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
