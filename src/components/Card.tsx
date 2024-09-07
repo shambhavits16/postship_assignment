@@ -1,4 +1,5 @@
-import { CalloutCard } from '@shopify/polaris';
+import { Button } from "@shopify/polaris";
+
 
 export type CardProps = {
      icon?: any;
@@ -12,15 +13,26 @@ export type CardProps = {
 
 const Card = (props: CardProps) => {
      return (
-          <div className={`${props.backgroundColor}`}>
-               <CalloutCard
-                    title={<div className={`${props.textColor} text-sm font-[650]`}>{props.head}</div>}
-                    illustration={props.icon}
-                    secondaryAction={{ content: props.secondaryButton }}
-                    primaryAction={{ content: props.primaryButton }}
-               >
-                    <p className={`text-[#4A4A4A] text-[13px] leading-5 font-[450]`}>{props.desc}</p>
-               </CalloutCard>
+          <div className={`${props.backgroundColor} rounded-lg shadow-md p-6 flex flex-col`}>
+               <div className="flex items-start mb-4">
+                    {props.icon && <div className="mr-4">{props.icon}</div>}
+                    <div>
+                         <h3 className={`${props.textColor} text-lg font-semibold mb-2`}>{props.head}</h3>
+                         <p className={`${props.textColor} text-sm mb-4`}>{props.desc}</p>
+                    </div>
+               </div>
+               <div className="flex justify-start mt-auto">
+                    {props.secondaryButton && (
+                         <Button textAlign="start" size="slim">
+                              {props.secondaryButton}
+                         </Button>
+                    )}
+                    <button
+                         className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md"
+                    >
+                         {props.primaryButton}
+                    </button>
+               </div>
           </div>
      )
 }
