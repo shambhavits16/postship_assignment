@@ -1,4 +1,4 @@
-import { Icon, Link } from '@shopify/polaris';
+import { Link } from '@shopify/polaris';
 import React, { useState } from 'react'
 import { ChevronDownIcon, ChevronUpIcon, PersonIcon, SearchIcon, SettingsIcon } from '@shopify/polaris-icons';
 
@@ -18,13 +18,16 @@ const navLinks: NavLink[] = [
 
 const Navbar: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
-    <div className="flex justify-between items-center bg-white px-20 py-2 shadow-sm w-full h-16">
+    <div className="flex justify-between items-center bg-white px-20 py-2 w-full h-16 border-b-[1px] border-[#8A8A8A]">
       {/* Left side */}
       <div className="flex space-x-6">
         {navLinks.map((l, i) => (
