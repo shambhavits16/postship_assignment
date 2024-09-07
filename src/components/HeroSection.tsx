@@ -8,6 +8,7 @@ const CardData: CardProps[] = [
           desc: "Your order details from the last 30 days have been successfully synced. Check them out now!",
           primaryButton: "Explore Your Orders",
           backgroundColor: "bg-white",
+          textColor: "text-[#4A4A4A]"
      },
      {
           icon: <AlertTriangleIcon className='w-5 h-5'/>,
@@ -15,6 +16,7 @@ const CardData: CardProps[] = [
           desc: "Tailor Your Email Experience: Set the Sender Email and Choose Notification Triggers",
           primaryButton: "Configure Notifications",
           backgroundColor: "bg-[#FFF8DB]",
+          textColor: "text-[#5E4200]"
      },
      {
           icon: <AlertCircleIcon className='w-5 h-5'/>,
@@ -22,6 +24,8 @@ const CardData: CardProps[] = [
           desc: "Include the Link to Your Store's Navigation Menu.",
           primaryButton: "Go To Navigation Menu",
           secondaryButton: "Copy Link",
+          backgroundColor: "bg-[#EAF4FF]",
+          textColor: "text-[#4A4A4A]"
      },
 ];
 
@@ -31,14 +35,17 @@ const HeroSection = () => {
                <PageTitle title='Welcome, John Mathew!!'/>
                <section className='grid grid-cols-3 gap-4 py-6'>
                     {CardData.map((data, i) => (
-                         <Card
-                              key={i}
-                              icon={data.icon}
-                              head={data.head}
-                              desc={data.desc}
-                              secondaryButton={data.secondaryButton}
-                              primaryButton={data.primaryButton}
-                              backgroundColor={data.backgroundColor} />
+                         <div key={i} className="h-[168px]">
+                              <Card
+                                   icon={data.icon}
+                                   head={data.head}
+                                   desc={data.desc}
+                                   secondaryButton={data.secondaryButton}
+                                   primaryButton={data.primaryButton}
+                                   backgroundColor={data.backgroundColor}
+                                   textColor={data.textColor}
+                              />
+                         </div>
                     ))}
                </section>
           </div>
