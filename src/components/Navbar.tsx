@@ -1,6 +1,6 @@
-import { Link } from '@shopify/polaris';
-import React from 'react'
-import { ChevronDownIcon } from '@shopify/polaris-icons';
+import { Icon, Link } from '@shopify/polaris';
+import React, { useState } from 'react'
+import { ChevronDownIcon, ChevronUpIcon, PersonIcon, SearchIcon, SettingsIcon } from '@shopify/polaris-icons';
 
 interface NavLink {
   label: string;
@@ -17,21 +17,57 @@ const navLinks: NavLink[] = [
 ];
 
 const Navbar: React.FC = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
-    <div className="flex justify-between items-center bg-white px-4 py-2 shadow-md">
+    <div className="flex justify-between items-center bg-white px-20 py-2 shadow-sm w-full h-16">
       {/* Left side */}
       <div className="flex space-x-6">
         {navLinks.map((l, i) => (
-          <span
-            key={i}
-            className="text-gray-800 font-medium flex items-center"
-          >
-            <Link url={l.href} removeUnderline monochrome>
-              {l.label}
+          <div key={i} className="flex items-center">
+            <Link
+              url={l.href}
+              monochrome={i !== 0}
+              removeUnderline
+            >
+              <span className={`text-sm font-medium ${i === 0 ? 'text-indigo-600 border-b-2 border-indigo-600' : 'text-gray-700'
+                }`}>
+                {l.label}
+              </span>
             </Link>
-            {l.hasDropdown && <ChevronDownIcon className="ml-1" fontSize={15}/>}
-          </span>
+            {l.hasDropdown && (
+              <button onClick={toggleDropdown} className="ml-1 focus:outline-none">
+                {isDropdownOpen ? (
+                  <ChevronUpIcon className="w-5 h-5 text-gray-500" />
+                ) : (
+                  <ChevronDownIcon className="w-5 h-5 text-gray-500" />
+                )}
+              </button>
+            )}
+          </div>
         ))}
+      </div>
+      {/* Right side */}
+      <div className="flex space-x-6 items-center">
+        <div className="flex items-center space-x-2">
+          <SearchIcon className="w-5 h-5 text-gray-500"/>
+          <input
+            type="text"
+            placeholder="Search"
+            className="border-b border-gray-300 focus:outline-none focus:border-gray-600 text-gray-800" />
+        </div>
+        <div className="flex items-center space-x-2">
+          <PersonIcon className="w-5 h-5 text-gray-500"/>
+          <span className="text-gray-800">Account</span>
+        </div>
+        <div className="flex items-center space-x-2">
+          <SettingsIcon className="w-5 h-5 text-gray-500"/>
+          <span className="text-sm text-gray-800">Settings</span>
+        </div>
       </div>
     </div>
   )
