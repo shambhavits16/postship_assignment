@@ -2,7 +2,7 @@ import { Button } from "@shopify/polaris";
 
 
 export type CardProps = {
-     icon?: any;
+     icon?: any | string[];
      head: string;
      desc: string | any;
      secondaryButton?: string;
@@ -15,11 +15,11 @@ const Card = (props: CardProps) => {
      return (
           <div className={`${props.backgroundColor} rounded-lg shadow-custom-card p-4 items-start flex flex-col h-full box-content`}>
                <div className="flex flex-col gap-2 items-start mb-4">
-                    <div className="flex flex-row gap-2 items-center mb-2">
+                    <div className="flex flex-row gap-2 items-center">
                          {props.icon && <div className="w-5 h-5">{props.icon}</div>}
                          <h3 className={`${props.textColor} text-sm font-[650]`}>{props.head}</h3>
                     </div>
-                    <p className={`${props.textColor} text-[13px] font-[450] mb-4`}>{props.desc}</p>
+                    <p className={`${props.textColor} text-[13px] font-[450]`}>{props.desc}</p>
                </div>
                <div className="flex justify-start gap-2 mt-auto mb-2">
                     {props.secondaryButton && (

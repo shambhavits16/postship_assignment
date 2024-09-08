@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PageTitle from "./PageTitle"
-import { Card } from "@shopify/polaris";
+import { Button, Card } from "@shopify/polaris";
 import { CalendarIcon, OrderIcon, ViewIcon } from "@shopify/polaris-icons";
 import { Cell, Pie, PieChart, Tooltip } from "recharts";
 
@@ -120,12 +120,12 @@ const PerformanceSection = () => {
                     </Card>
                     {/* Star Facts */}
                     <Card>
-                         <div>
-                              <h2 className="font-semibold text-lg">Star Facts about your orders!!!</h2>
-                              <p>There are 8 shipments that have been in out for delivery for more than 3 days.</p>
-                              <p>There are 5 shipments in exception right now</p>
-                              <p>The maximum chargebacks are from Miami.</p>
-                              <button className="mt-4 bg-black text-white py-2 px-4 rounded">Check Orders Page</button>
+                         <div className="bg-[#956F00] items-center">
+                              <h2 className="font-[650] text-sm">Star Facts about your orders!!!</h2>
+                              <p className="text-[13px] leading-5 font-[450]">There are 8 shipments that have been in out for delivery for more than 3 days.<br />
+                                   There are 5 shipments in exception right now.<br />
+                                   The maximum chargebacks are from Miami.</p>
+                              <Button textAlign="start" size="slim">Check Orders Page</Button>
                          </div>
                     </Card>
 
