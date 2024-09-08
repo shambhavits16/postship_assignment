@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
 
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-white px-20 py-2 w-full h-16 border-b-[1px] border-[#8A8A8A]">
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center bg-white px-20 py-2 max-w-[1280px] h-16 border-b-[1px] border-[#8A8A8A]">
       {/* Left side */}
       <div className="flex space-x-6">
         {navLinks.map((l, i) => (

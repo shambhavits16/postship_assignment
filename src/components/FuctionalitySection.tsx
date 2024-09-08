@@ -90,11 +90,11 @@ const FunctionalitySection = () => {
                                    Discover a variety of popular integrations tailored for your convenience.
                                    <div className="flex space-x-6 mt-4">
                                         {/* Logos as images/icons */}
-                                        <img src="src/assets/svg/Paypal.svg" alt="PayPal" className="w-9 h-9" />
-                                        <img src="src/assets/svg/Ali reviews.svg" alt="Shopify" className="w-9 h-9" />
-                                        <img src="src/assets/svg/instafeed.svg" alt="Shopify" className="w-9 h-9" />
-                                        <img src="src/assets/svg/Google analytics.svg" alt="Shopify" className="w-9 h-9" />
-                                        <img src="src/assets/svg/Shopify flow.svg" alt="Shopify" className="w-9 h-9" />
+                                        <img src="/src/assets/svg/Paypal.svg" alt="PayPal" className="w-9 h-9" />
+                                        <img src="/src/assets/svg/Ali reviews.svg" alt="Ali Reviews" className="w-9 h-9" />
+                                        <img src="/src/assets/svg/instafeed.svg" alt="Instagram Feed" className="w-9 h-9" />
+                                        <img src="/src/assets/svg/Google analytics.svg" alt="Google Analytics" className="w-9 h-9" />
+                                        <img src="/src/assets/svg/Shopify flow.svg" alt="Shopify" className="w-9 h-9" />
                                    </div>
                               </>
                          }
