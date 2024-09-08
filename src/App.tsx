@@ -6,7 +6,7 @@ import FuctionalitySection from './components/FuctionalitySection'
 
 const App: React.FC = () => {
   return (
-    <div className='bg-white'>
+    <div className='bg-white max-w-[1280px] mx-auto'>
       <Navbar />
       <div className='pt-16'>
         <HeroSection />
