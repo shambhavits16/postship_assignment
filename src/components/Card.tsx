@@ -4,7 +4,7 @@ import { Button } from "@shopify/polaris";
 export type CardProps = {
      icon?: any;
      head: string;
-     desc: string;
+     desc: string | any;
      secondaryButton?: string;
      primaryButton: string;
      backgroundColor?: string;

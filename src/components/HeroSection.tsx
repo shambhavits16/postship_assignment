@@ -1,6 +1,7 @@
 import { AlertCircleIcon, AlertTriangleIcon } from '@shopify/polaris-icons';
 import Card, { CardProps } from './Card';
 import PageTitle from './PageTitle';
+import { Link } from '@shopify/polaris';
 
 const CardData: CardProps[] = [
      {
@@ -21,7 +22,17 @@ const CardData: CardProps[] = [
      {
           icon: <AlertCircleIcon className='w-5 h-5'/>,
           head: "Your Tracking Link has been generated",
-          desc: "Include the Link to Your Store's Navigation Menu.",
+          desc: (
+               <>
+                    Include the{" "}
+                    <Link
+                         url="#"
+                    >
+                         Link
+                    </Link>{" "}
+                    to Your Store's Navigation Menu.
+               </>
+          ),
           primaryButton: "Go To Navigation Menu",
           secondaryButton: "Copy Link",
           backgroundColor: "bg-[#EAF4FF]",
@@ -31,12 +42,12 @@ const CardData: CardProps[] = [
 
 const HeroSection = () => {
      return (
-          <div className='px-20 py-11'>
+          <div className='px-20 py-12'>
                <PageTitle title='Welcome, John Mathew!!'/>
                <section className='grid grid-cols-3 gap-4 py-6'>
                     {CardData.map((data, i) => (
-                         <div key={i} className="h-[168px]">
                               <Card
+                                   key={i}
                                    icon={data.icon}
                                    head={data.head}
                                    desc={data.desc}
@@ -45,7 +56,6 @@ const HeroSection = () => {
                                    backgroundColor={data.backgroundColor}
                                    textColor={data.textColor}
                               />
-                         </div>
                     ))}
                </section>
           </div>
