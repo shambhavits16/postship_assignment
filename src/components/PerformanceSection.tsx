@@ -45,9 +45,8 @@ const PerformanceSection = () => {
      return (
           <div className='px-20 py-11 bg-[#FFF7EE]'>
                <PageTitle title="Instant Dive into Your Performance Metrics" />
-               {/* Tab section */}
-               {/* <Tabs tabs={tabs} selected={selectedTab} onSelect={setSelectedTab} /> */}
 
+               {/* Tab section */}
                <div className="flex space-x-2 overflow-x-auto mt-6">
                     {tabs.map((tab) => (
                          <button

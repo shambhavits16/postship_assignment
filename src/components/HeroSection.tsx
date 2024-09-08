@@ -12,7 +12,7 @@ const CardData: CardProps[] = [
           textColor: "text-[#4A4A4A]"
      },
      {
-          icon: <AlertTriangleIcon className='w-5 h-5'/>,
+          icon: <AlertTriangleIcon className='w-5 h-5' />,
           head: "Customize Customer Notification",
           desc: "Tailor Your Email Experience: Set the Sender Email and Choose Notification Triggers",
           primaryButton: "Configure Notifications",
@@ -20,7 +20,7 @@ const CardData: CardProps[] = [
           textColor: "text-[#5E4200]"
      },
      {
-          icon: <AlertCircleIcon className='w-5 h-5'/>,
+          icon: <AlertCircleIcon className='w-5 h-5' />,
           head: "Your Tracking Link has been generated",
           desc: (
                <>
@@ -43,19 +43,19 @@ const CardData: CardProps[] = [
 const HeroSection = () => {
      return (
           <div className='px-20 py-12'>
-               <PageTitle title='Welcome, John Mathew!!'/>
+               <PageTitle title='Welcome, John Mathew!!' />
                <section className='grid grid-cols-3 gap-4 py-6'>
                     {CardData.map((data, i) => (
-                              <Card
-                                   key={i}
-                                   icon={data.icon}
-                                   head={data.head}
-                                   desc={data.desc}
-                                   secondaryButton={data.secondaryButton}
-                                   primaryButton={data.primaryButton}
-                                   backgroundColor={data.backgroundColor}
-                                   textColor={data.textColor}
-                              />
+                         <Card
+                              key={i}
+                              icon={data.icon}
+                              head={data.head}
+                              desc={data.desc}
+                              secondaryButton={data.secondaryButton}
+                              primaryButton={data.primaryButton}
+                              backgroundColor={data.backgroundColor}
+                              textColor={data.textColor}
+                         />
                     ))}
                </section>
           </div>

@@ -1,5 +1,5 @@
 import PageTitle from "./PageTitle";
-import Card from "./Card"; // Import the reusable Card component
+import Card from "./Card";
 import { useState } from "react";
 
 const FunctionalitySection = () => {

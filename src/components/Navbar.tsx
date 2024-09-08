@@ -1,4 +1,3 @@
-import { Link } from '@shopify/polaris';
 import React, { useState } from 'react'
 import { ChevronDownIcon, ChevronUpIcon, PersonIcon, SearchIcon, SettingsIcon } from '@shopify/polaris-icons';
 
@@ -38,10 +37,10 @@ const Navbar: React.FC = () => {
             <span
               onClick={() => handleTabClick(l.label)}
               className={`text-sm font-semibold cursor-pointer ${selectedTab === l.label
-                  ? "border-b-2 border-[#8051FF]"
-                  : "text-[#4A4A4A]"
+                ? "border-b-2 border-[#8051FF]"
+                : "text-[#4A4A4A]"
                 } hover:no-underline`}
-              style={{ display: "inline-block" }} // Needed to apply border correctly
+              style={{ display: "inline-block" }}
             >
               {l.label}
             </span>
@@ -67,11 +66,11 @@ const Navbar: React.FC = () => {
             className="w-[120px] pl-8 pr-4 text-sm font-normal border-b border-[#4A4A4A] focus:outline-none focus:border-gray-600 text-[#616161]" />
         </div>
         <div className="flex items-center space-x-1">
-          <PersonIcon className="w-5 h-5 text-[#4A4A4A]"/>
+          <PersonIcon className="w-5 h-5 text-[#4A4A4A]" />
           <span className="text-sm font-semibold text-[#616161]">Account</span>
         </div>
         <div className="flex items-center space-x-1">
-          <SettingsIcon className="w-5 h-5 text-[#4A4A4A]"/>
+          <SettingsIcon className="w-5 h-5 text-[#4A4A4A]" />
           <span className="text-sm font-semibold text-[#616161]">Settings</span>
         </div>
       </div>
