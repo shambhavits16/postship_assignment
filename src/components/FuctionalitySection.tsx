@@ -27,7 +27,7 @@ const FunctionalitySection = () => {
                                                   value={accentColor}
                                                   onChange={(e) => setAccentColor(e.target.value)}
                                              />
-                                             
+
                                              <div
                                                   className="w-20 h-9 rounded-lg"
                                                   style={{ backgroundColor: accentColor }}
@@ -73,35 +73,34 @@ const FunctionalitySection = () => {
                     />
 
                     <div className="grid grid-rows-2 grid-flow-col gap-y-10">
-                    {/* Exclusive Onboarding Card */}
+                         {/* Exclusive Onboarding Card */}
                          <Card
-                         head="Exclusive Onboarding Support for High-Volume Brands"
-                         desc="Unlock personalized guidance! Book a one-on-one onboarding call to streamline your experience."
-                         primaryButton="Schedule A Call"
-                         backgroundColor="bg-white"
-                         textColor="text-black"
-                    />
+                              head="Exclusive Onboarding Support for High-Volume Brands"
+                              desc="Unlock personalized guidance! Book a one-on-one onboarding call to streamline your experience. Unlock personalized guidance! Book a one-on-one onboarding call to streamline your experience."
+                              primaryButton="Schedule A Call"
+                              backgroundColor="bg-white"
+                              textColor="text-black"
+                         />
 
-                    {/* Explore Our Integrated Ecosystem Card */}
-                    <Card
-                         head="Explore Our Integrated Ecosystem"
-                         desc={
-                              <>
-                                   Discover a variety of popular integrations tailored for your convenience.
-                                   <div className="flex space-x-6 mt-4">
-                                        {/* Logos as images/icons */}
-                                        <img src="/svg/Paypal.svg" alt="PayPal" className="w-9 h-9" />
-                                        <img src="/svg/Ali reviews.svg" alt="Ali Reviews" className="w-9 h-9" />
-                                        <img src="/svg/instafeed.svg" alt="Instagram Feed" className="w-9 h-9" />
-                                        <img src="/svg/Google analytics.svg" alt="Google Analytics" className="w-9 h-9" />
-                                        <img src="/svg/Shopify flow.svg" alt="Shopify" className="w-9 h-9" />
-                                   </div>
-                              </>
-                         }
-                         primaryButton="Explore Integrations"
-                         backgroundColor="bg-white"
-                         textColor="text-black"
-                    />
+                         {/* Explore Our Integrated Ecosystem Card */}
+                         <Card
+                              head="Explore Our Integrated Ecosystem"
+                              desc={
+                                   <>
+                                        Discover a variety of popular integrations tailored for your convenience.
+                                        <div className="flex space-x-6 mt-4">
+                                             <img src="/svg/Paypal.svg" alt="PayPal" className="w-9 h-9" />
+                                             <img src="/svg/Ali reviews.svg" alt="Ali Reviews" className="w-9 h-9" />
+                                             <img src="/svg/instafeed.svg" alt="Instagram Feed" className="w-9 h-9" />
+                                             <img src="/svg/Google analytics.svg" alt="Google Analytics" className="w-9 h-9" />
+                                             <img src="/svg/Shopify flow.svg" alt="Shopify" className="w-9 h-9" />
+                                        </div>
+                                   </>
+                              }
+                              primaryButton="Explore Integrations"
+                              backgroundColor="bg-white"
+                              textColor="text-black"
+                         />
                     </div>
 
                     {/* Seamlessly Integrate Custom HTML Elements Card */}
@@ -112,7 +111,7 @@ const FunctionalitySection = () => {
                                    Unleash creativity with our Custom HTML feature. Add links, custom messages, or any HTML content to elevate the tracking page experience for your customers.
                                    <div className="mt-6">
                                         <label className="block mb-1 text-sm">HTML Link</label>
-                                        <textarea placeholder="Value" className="w-full p-2 border border-[#8A8A8A] rounded-lg" rows={7} />
+                                        <textarea placeholder="Value" className="w-full p-2 border border-[#8A8A8A] rounded-lg" rows={10} />
                                    </div>
                               </>
                          }
